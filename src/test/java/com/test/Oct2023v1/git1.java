@@ -11,7 +11,7 @@ public class git1 extends Inputdata1 {
 	public void f() {
 		System.out.println("TestNG");
 		loadData();
-		//17-10
+		//17-10 Test
 		try {
 			driver.get(myApplication);
 maximize();
