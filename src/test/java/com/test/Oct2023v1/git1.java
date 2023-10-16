@@ -6,12 +6,12 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 public class git1 extends Inputdata1 {
-
+	
 	@Test
 	public void f() {
 		System.out.println("TestNG");
 		loadData();
-
+		//16-10
 		try {
 			driver.get(myApplication);
 maximize();
