@@ -12,6 +12,7 @@ public class git1 extends Inputdata1 {
 		System.out.println("TestNG");
 		loadData();
 		// 17-10 Test ---- git1 11
+//Anoteehr commit
 		try {
 			driver.get(myApplication);
 			maximize();
