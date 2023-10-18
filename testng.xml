@@ -4,8 +4,8 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="com.test.Oct2023v1.InvokeApps" />
-			<class name="com.test.Oct2023v1.Amz1" />
 			<class name="com.test.Oct2023v1.git1" />
+			<class name="com.test.Oct2023v1.Amz1" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

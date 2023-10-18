@@ -9,7 +9,7 @@ public class InvokeApps extends Inputdata1 {
 
 	@Test
 	public void f() {
-		System.out.println("TestNG");
+		System.out.println("TestNG - MyTest");
 		loadData();
 
 		try {
@@ -19,6 +19,8 @@ maximize();
 			EnterLastName("LAAAMMM");
 
 			Thread.sleep(2000);
+			takescreen(this.getClass().getName());			
+			
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}

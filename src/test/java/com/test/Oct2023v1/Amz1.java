@@ -1,7 +1,10 @@
 package com.test.Oct2023v1;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import java.io.File;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
@@ -9,7 +12,7 @@ public class Amz1 extends Inputdata1 {
 
 	@Test
 	public void f() {
-		System.out.println("TestNG");
+		System.out.println("TestNG - My Test");
 		loadData();
 
 		try {
@@ -17,6 +20,7 @@ public class Amz1 extends Inputdata1 {
 maximize();
 			ClickAmaz();
 			Thread.sleep(2000);
+		takescreen(this.getClass().getName());			
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}

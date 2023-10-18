@@ -2,11 +2,17 @@ package com.test.Oct2023v1;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.asserts.SoftAssert;
 
 public class Inputdata1 {
 	public File F = null;
@@ -14,6 +20,8 @@ public class Inputdata1 {
 	public FileInputStream fis = null;
 	public WebDriver driver = null;
 	public String myApplication = "file:///D:/Satish/05DemoApps/demo.html";
+	public File destiantion,source=null;
+	public 	SoftAssert sa=null;
 
 	public void loadData() {
 
@@ -24,8 +32,8 @@ public class Inputdata1 {
 			pp = new Properties();
 			pp.load(fis);
 
-			System.setProperty("webdriver.chrome.driver", "D:\\Satish\\05DemoApps\\ChromeDriver\\chromedriver.exe");
-			driver = new ChromeDriver();
+			System.setProperty("webdriver.gecko.driver", "D:\\Satish\\05DemoApps\\ChromeDriver\\geckodriver.exe");
+			driver = new FirefoxDriver();
 
 		}
 
@@ -63,6 +71,19 @@ public class Inputdata1 {
 		}
 	}
 
+	public void takescreen(String fname) throws IOException
+	{
+		TakesScreenshot tt=((TakesScreenshot)driver);
+		source=tt.getScreenshotAs(OutputType.FILE);
+		String path1="D://Satish//03Eclipse_Workspace//15Oct2023v1//Oct2023v1//screenshot//"+fname+".bmp";
+
+		destiantion=new File(path1);
+FileUtils.copyFile(source, destiantion);
+
+	}
+	
+	
+	
 	public void ClickGit() {
 		try {
 			driver.findElement(By.xpath(pp.getProperty("git1"))).click();
