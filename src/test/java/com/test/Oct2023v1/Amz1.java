@@ -14,7 +14,7 @@ public class Amz1 extends Inputdata1 {
 	public void f() {
 		System.out.println("TestNG - My Test");
 		loadData();
-
+//Added Commit
 		try {
 			driver.get(myApplication);
 maximize();
