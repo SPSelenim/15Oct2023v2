@@ -32,5 +32,11 @@ maximize();
 	{
 		driver.close();
 	}
+
+	@Override
+	public void ClickAmaz() {
+		// TODO Auto-generated method stub
+		super.ClickAmaz();
+	}
 	
 }

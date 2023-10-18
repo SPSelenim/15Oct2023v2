@@ -4,15 +4,12 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.asserts.SoftAssert;
 
 public class Inputdata1 {
 	public File F = null;
@@ -21,7 +18,6 @@ public class Inputdata1 {
 	public WebDriver driver = null;
 	public String myApplication = "file:///D:/Satish/05DemoApps/demo.html";
 	public File destiantion,source=null;
-	public 	SoftAssert sa=null;
 
 	public void loadData() {
 
