@@ -29,7 +29,7 @@ public Logger log=null;
 			driver.get(myApplication);
 			maximize();
 		try {
-			 log.debug("opening webiste");
+			 log.debug("opening webistesss");
 		log.info("Opened");
 		
 		}
