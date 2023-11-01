@@ -5,17 +5,22 @@ import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import org.testng.IRetryAnalyzer;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
+import com.sun.net.httpserver.Authenticator.Retry;
 
 public class git1 extends Inputdata1 {
 private static final String JavascriptExecutor = null;
 public	SoftAssert sa=null;
 public Logger log=null;
-	@Test 
+	@Test //(retryAnalyzer = Retry.class)
 	public void f() {
 		System.out.println("TestNG");
+	//lod Data
 		loadData();
 		PropertyConfigurator.configure("D:\\Satish\\03Eclipse_Workspace\\15Oct2023v1\\Oct2023v1\\src\\test\\java\\com\\test\\Oct2023v1\\log4j.properties");
 		log = Logger.getLogger("mydev");
@@ -56,6 +61,8 @@ public Logger log=null;
 			System.out.println("Actual : " + strActualTitle);
 			System.out.println("Expected : " + strExpectedTitle);
 			Thread.sleep(2000);
+			Assert.assertEquals(false, true);
+			
 		log.info("DONEEEEEEE");
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
